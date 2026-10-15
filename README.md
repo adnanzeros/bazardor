@@ -30,4 +30,4 @@ npm run dev
 
 ## Live Link
 
-[api/auth/callback/github](https://bazardor-seven-flame.vercel.app/)
+(https://bazardor-seven-flame.vercel.app/)
