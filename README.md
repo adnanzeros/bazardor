@@ -26,20 +26,8 @@
 ```bash
 npm install
 npm run dev
-```
 
-`.env` ফাইলে এগুলো দিতে হবে:
-
-```
-BETTER_AUTH_SECRET=
-BETTER_AUTH_URL=http://localhost:3000
-MONGODB_URL=
-GOOGLE_CLIENT_ID=
-GOOGLE_CLIENT_SECRET=
-GITHUB_CLIENT_ID=
-GITHUB_CLIENT_SECRET=
-```
 
 ## Live Link
 
-(deploy করার পর এখানে লিংক বসাবো)
+[api/auth/callback/github](https://bazardor-seven-flame.vercel.app/)
