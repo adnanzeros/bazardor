@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# বাজার দর (BazarDor)
 
-## Getting Started
+বাংলাদেশের নিত্যপ্রয়োজনীয় পণ্যের আজকের দাম এক জায়গায় দেখার একটি ওয়েবসাইট। এটি আমার Next.js অ্যাসাইনমেন্ট প্রজেক্ট।
 
-First, run the development server:
+## Technologies
+
+- Next.js (App Router)
+- React
+- Better Auth
+- MongoDB
+- react-hot-toast
+- CSS Modules
+
+## Features
+
+1. পণ্যের দাম এবং দাম বাড়া/কমার ▲ ▼ ব্যাজ দেখা যায়
+2. উপরে স্ক্রল হওয়া প্রাইস টিকার (marquee)
+3. ক্যাটাগরি অনুযায়ী পণ্য দেখা এবং দাম অনুযায়ী সাজানো (sort)
+4. Email/Password এবং Google/GitHub দিয়ে লগইন
+5. লগইন করলে পণ্যের বিস্তারিত পেজ (বাজারভিত্তিক দাম) দেখা যায়
+6. প্রোফাইল পেজ থেকে নাম ও ছবি আপডেট করা যায়
+7. মোবাইল, ট্যাবলেট ও ডেস্কটপে কাজ করে
+
+## Run locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+`.env` ফাইলে এগুলো দিতে হবে:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```
+BETTER_AUTH_SECRET=
+BETTER_AUTH_URL=http://localhost:3000
+MONGODB_URL=
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
+GITHUB_CLIENT_ID=
+GITHUB_CLIENT_SECRET=
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Live Link
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+(deploy করার পর এখানে লিংক বসাবো)
