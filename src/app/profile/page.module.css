@@ -1,0 +1,360 @@
+
+.page {
+  width: min(560px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 42px 0 64px;
+  color: #17211c;
+}
+
+.card {
+  padding: 32px;
+  border: 1px solid #e0e9e1;
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 12px 40px rgba(15, 65, 35, 0.07);
+}
+
+.heading {
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: #087f46;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.heading h1 {
+  margin: 0 0 8px;
+  color: #17211c;
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.heading p {
+  margin: 0;
+  color: #738077;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.form {
+  display: grid;
+  gap: 22px;
+}
+
+.photoSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 16px;
+  border: 1px dashed #c9dfce;
+  border-radius: 16px;
+  background: #f8fcf8;
+}
+
+.avatar {
+  display: grid;
+  place-items: center;
+  width: 112px;
+  height: 112px;
+  margin-bottom: 16px;
+  overflow: hidden;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #087f46, #23a65e);
+  color: #fff;
+  font-size: 40px;
+  font-weight: 800;
+  box-shadow: 0 0 0 1px #dcebe0, 0 6px 18px rgba(8, 127, 70, 0.12);
+}
+
+.avatar img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.uploadButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 10px 17px;
+  border: 1px solid #c9e4d0;
+  border-radius: 10px;
+  background: #fff;
+  color: #087f46;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.uploadButton:hover {
+  border-color: #087f46;
+  background: #edf8f0;
+}
+
+.fileInput {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
+}
+
+.fileInput:focus-visible + .uploadButton {
+  outline: 3px solid rgba(8, 127, 70, 0.25);
+  outline-offset: 3px;
+}
+
+.hint {
+  margin: 7px 0 0;
+  color: #77857a;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.photoSection .hint {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.field {
+  min-width: 0;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 8px;
+  color: #27382c;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.field input {
+  display: block;
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 14px;
+  border: 1px solid #d4dfd5;
+  border-radius: 10px;
+  outline: none;
+  background: #fbfdfb;
+  color: #17211c;
+  font-family: inherit;
+  font-size: 15px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.field input::placeholder {
+  color: #9aa79d;
+}
+
+.field input:focus {
+  border-color: #087f46;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(8, 127, 70, 0.11);
+}
+
+.field input[readonly] {
+  border-color: #e0e7e0;
+  background: #f0f4f0;
+  color: #718075;
+  cursor: not-allowed;
+}
+
+.field input:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.saveButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  width: 100%;
+  min-height: 49px;
+  margin-top: 2px;
+  padding: 13px 18px;
+  border: none;
+  border-radius: 11px;
+  background: linear-gradient(135deg, #087f46, #0b9854);
+  color: #fff;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 5px 14px rgba(8, 127, 70, 0.14);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.saveButton:hover:not(:disabled) {
+  box-shadow: 0 8px 20px rgba(8, 127, 70, 0.22);
+  transform: translateY(-1px);
+}
+
+.saveButton:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.saveButton:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.spinner {
+  width: 17px;
+  height: 17px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+.back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: fit-content;
+  max-width: 100%;
+  margin: 22px auto 0;
+  color: #087f46;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.back:hover {
+  color: #055c32;
+}
+
+.saveButton:focus-visible,
+.back:focus-visible,
+.uploadButton:focus-visible {
+  outline: 3px solid rgba(8, 127, 70, 0.25);
+  outline-offset: 3px;
+}
+
+.skeleton {
+  width: 100%;
+  height: 460px;
+  border: 1px solid #e7eee7;
+  border-radius: 22px;
+  background: linear-gradient(
+    90deg,
+    #e9eee9 25%,
+    #f5f8f5 50%,
+    #e9eee9 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.2s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shimmer {
+  to {
+    background-position: -200% 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .page {
+    width: calc(100% - 28px);
+    padding: 24px 0 40px;
+  }
+
+  .card {
+    padding: 24px 18px;
+    border-radius: 17px;
+  }
+
+  .heading {
+    margin-bottom: 24px;
+  }
+
+  .heading h1 {
+    font-size: 24px;
+  }
+
+  .heading p {
+    font-size: 13px;
+  }
+
+  .form {
+    gap: 19px;
+  }
+
+  .photoSection {
+    padding: 21px 12px;
+  }
+
+  .avatar {
+    width: 96px;
+    height: 96px;
+    font-size: 34px;
+  }
+
+  .field input {
+    font-size: 16px;
+  }
+
+  .saveButton {
+    min-height: 49px;
+  }
+
+  .skeleton {
+    height: 420px;
+  }
+}
+
+@media (max-width: 360px) {
+  .page {
+    width: calc(100% - 20px);
+    padding-top: 18px;
+  }
+
+  .card {
+    padding: 20px 14px;
+  }
+
+  .heading h1 {
+    font-size: 22px;
+  }
+
+  .uploadButton {
+    width: 100%;
+  }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  .page *,
+  .page *::before,
+  .page *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
