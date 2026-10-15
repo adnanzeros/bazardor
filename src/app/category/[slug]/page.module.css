@@ -1,0 +1,525 @@
+.page {
+  width: 100%;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 32px 20px 60px;
+  color: #17211c;
+}
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 28px;
+  color: #737d75;
+  font-size: 14px;
+}
+
+.breadcrumbs a {
+  color: #15803d;
+  text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+  color: #166534;
+}
+
+.categoryHeading {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 28px;
+  margin-bottom: 30px;
+  border: 1px solid #e3e9e3;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #f0fdf4, #ffffff 75%);
+}
+
+.categoryIcon {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 76px;
+  height: 76px;
+  border: 1px solid #dcfce7;
+  border-radius: 20px;
+  background: #ffffff;
+  font-size: 38px;
+}
+
+.categoryHeading h1 {
+  margin: 0 0 8px;
+  font-size: clamp(24px, 3vw, 34px);
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.categoryHeading p {
+  margin: 0;
+  color: #68736b;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.categoryResults {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.categoryResults p {
+  margin: 0;
+  color: #667068;
+  font-size: 14px;
+}
+
+.categoryResults strong {
+  color: #17211c;
+  font-weight: 800;
+}
+
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.productCard {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  padding: 22px;
+  border: 1px solid #e1e7e1;
+  border-radius: 18px;
+  background: #ffffff;
+  color: inherit;
+  text-decoration: none;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.productCard:hover {
+  transform: translateY(-3px);
+  border-color: #86c99a;
+  box-shadow: 0 10px 28px rgb(22 101 52 / 8%);
+}
+
+.productCardTop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.productCardTop h2 {
+  margin: 0;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.productCardTop > span {
+  flex-shrink: 0;
+  color: #15803d;
+  font-size: 20px;
+}
+
+.productPrice {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 22px;
+}
+
+.productPrice strong {
+  color: #166534;
+  font-size: 27px;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.productPrice > span {
+  color: #7a847c;
+  font-size: 13px;
+}
+
+.priceChange {
+  align-self: flex-start;
+  margin: 12px 0 0;
+  padding: 5px 9px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.priceUp {
+  background: #fff1f0;
+  color: #c0392b;
+}
+
+.priceDown {
+  background: #ecfdf3;
+  color: #15803d;
+}
+
+.priceStable {
+  background: #f3f4f6;
+  color: #626b64;
+}
+
+.productViewLink {
+  margin-top: 22px;
+  padding-top: 14px;
+  border-top: 1px solid #edf0ed;
+  color: #15803d;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.emptyState {
+  padding: 48px 24px;
+  border: 1px dashed #cbd5cb;
+  border-radius: 20px;
+  background: #f9fbf9;
+  text-align: center;
+}
+
+.emptyState h2 {
+  margin: 0 0 10px;
+  font-size: 22px;
+}
+
+.emptyState p {
+  margin: 0 0 22px;
+  color: #69736b;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.emptyState a,
+.categoryFooterLink a {
+  color: #15803d;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.emptyState a:hover,
+.categoryFooterLink a:hover {
+  text-decoration: underline;
+}
+
+.categoryFooterLink {
+  margin-top: 34px;
+  font-size: 14px;
+}
+
+@media (max-width: 991px) {
+  .page {
+    padding: 26px 20px 48px;
+  }
+
+  .productGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .categoryHeading {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page {
+    padding: 20px 14px 36px;
+  }
+
+  .breadcrumbs {
+    gap: 8px;
+    margin-bottom: 20px;
+    font-size: 12px;
+  }
+
+  .categoryHeading {
+    align-items: flex-start;
+    gap: 13px;
+    padding: 18px 15px;
+    margin-bottom: 24px;
+    border-radius: 17px;
+  }
+
+  .categoryIcon {
+    width: 54px;
+    height: 54px;
+    border-radius: 14px;
+    font-size: 28px;
+  }
+
+  .categoryHeading h1 {
+    margin-bottom: 5px;
+    font-size: 22px;
+  }
+
+  .categoryHeading p {
+    font-size: 13px;
+  }
+
+  .productGrid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .productCard {
+    padding: 18px;
+    border-radius: 15px;
+  }
+
+  .productCardTop h2 {
+    font-size: 17px;
+  }
+
+  .productPrice {
+    margin-top: 16px;
+  }
+
+  .productPrice strong {
+    font-size: 25px;
+  }
+
+  .productViewLink {
+    margin-top: 18px;
+  }
+
+  .emptyState {
+    padding: 34px 18px;
+  }
+
+  .emptyState h2 {
+    font-size: 19px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .productCard,
+  .breadcrumbs a {
+    transition: none;
+  }
+
+  .productCard:hover {
+    transform: none;
+  }
+}
+
+
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #e4e9e4;
+  border-radius: 16px;
+  background: #ffffff;
+  color: inherit;
+  text-decoration: none;
+  transition: transform 180ms ease, box-shadow 180ms ease,
+    border-color 180ms ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  border-color: #b5d9bf;
+  box-shadow: 0 12px 28px #193c2510;
+}
+
+.cardVisual {
+  display: grid;
+  min-height: 130px;
+  place-items: center;
+  background: #f4f8f2;
+}
+
+.cardEmoji {
+  font-size: 60px;
+  line-height: 1.2;
+}
+
+.cardBody {
+  padding: 16px;
+}
+
+.cardBody h3 {
+  min-height: 48px;
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.5;
+  font-weight: 700;
+}
+
+.unitLine {
+  margin: 2px 0 0;
+  color: #78847b;
+  font-size: 13px;
+}
+
+.priceRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.priceLabel {
+  color: #78847b;
+  font-size: 12px;
+}
+
+.priceRow strong {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.badge {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 6px 9px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.up {
+  background: #e9f8ed;
+  color: #168343;
+}
+
+.down {
+  background: #fff0ef;
+  color: #d93434;
+}
+
+.flat {
+  background: #eef0f2;
+  color: #657078;
+}
+
+/* ---------- Sort control (C1) ---------- */
+
+.sortBox {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #667068;
+}
+
+.sortSelectWrap {
+  position: relative;
+}
+
+.sortSelect {
+  appearance: none;
+  min-height: 40px;
+  padding: 0 38px 0 14px;
+  border: 1px solid #dce5dd;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #17211c;
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.sortSelect:focus-visible {
+  outline: 3px solid #8fd1a8;
+  outline-offset: 2px;
+}
+
+.sortChevron {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  width: 16px;
+  height: 16px;
+  color: #667068;
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+
+
+
+.skeletonCard {
+  height: 260px;
+  border-radius: 16px;
+}
+
+
+
+.emptyState .ctaButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0 22px;
+  border-radius: 10px;
+  background: #087f46;
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.emptyState .ctaButton:hover {
+  background: #066638;
+  text-decoration: none;
+}
+
+@media (max-width: 991px) {
+  .cardGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .cardGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 11px;
+  }
+
+  .cardVisual {
+    min-height: 104px;
+  }
+
+  .cardEmoji {
+    font-size: 46px;
+  }
+
+  .cardBody {
+    padding: 12px;
+  }
+
+  .cardBody h3 {
+    min-height: 42px;
+    font-size: 14px;
+  }
+
+  .priceRow strong {
+    font-size: 17px;
+  }
+
+  .categoryResults {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .skeletonCard {
+    height: 210px;
+  }
+}
